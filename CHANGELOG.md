@@ -74,7 +74,7 @@ See [Porting Guide](http://docs.ansible.com/ansible/devel/porting_guides.html) f
 * ec2_vpc.
 * ec2_ami_search, use ec2_ami_facts instead.
 * nxos_mtu, use nxos_system's `system_mtu` option. To specify an interfaces MTU use nxos_interface.
-  https://github.com/ansible/ansible/issues/29387
+* panos_nat_policy: Use panos_nat_rule the old module uses deprecated API calls
 
 ### New Plugins
 
@@ -108,7 +108,9 @@ See [Porting Guide](http://docs.ansible.com/ansible/devel/porting_guides.html) f
   * aws_ses_identity
   * aws_ssm_parameter_store
   * aws_waf_condition
+  * aws_waf_rule
   * cloudfront_distribution
+  * cloudfront_invalidation
   * cloudfront_origin_access_identity
   * ec2_ami_facts
   * ec2_asg_lifecycle_hook
@@ -326,6 +328,7 @@ See [Porting Guide](http://docs.ansible.com/ansible/devel/porting_guides.html) f
   * onyx_vlan
 - panos
   * panos_query_rules
+  * panos_dag_tags
 - radware
   * vdirect_commit
   * vdirect_runnable
